@@ -1,0 +1,333 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-size: 2em;
+    font-family: Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif;
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    width : auto;
+}
+
+header {
+    grid-area: header;
+    background:#343435;
+    display: grid;
+    grid-template-areas: "a b c d " "f g h i";
+    grid-template-columns: 1fr 1fr 10% 2%;
+    grid-template-rows: 10px 1fr 1fr 10px;
+}
+
+header div#time{
+    display: grid; 
+    grid-area: 2 / 1 / span 1 / span 1  ;
+    color: white; 
+    padding: 1px 15px;
+}
+
+header div#date{
+    display: grid; 
+    grid-area: 3 / 1 / span 1 / span 1  ;
+    color: white; 
+    padding: 1px 15px;
+}
+
+header button#lock{
+    box-shadow: 0px 10px 14px -7px black;
+	background-color:white;
+	border-radius:8px;
+    color:white;
+    font-family:Arial;
+    background-image: url(lock.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	font-size:30px;
+	font-weight:bold;
+    padding:20px 42px;
+    display: grid; 
+    grid-area: 2 / 3 / span 2 / span 1   ; 
+
+}
+
+header button#unlock{
+    box-shadow: 0px 10px 14px -7px black;
+	background-color:white;
+	border-radius:8px;
+    color:white;
+    font-family:Arial;
+    background-image: url(unlock.png);
+    display : none;
+    background-repeat: no-repeat;
+    background-position: center;
+	font-size:30px;
+	font-weight:bold;
+    padding:20px 42px;
+    display: grid; 
+    grid-area: 2 / 3 / span 2 / span 1   ; 
+
+}
+
+footer {
+    grid-area: footer;
+    font-size: 1em;
+    background: #343435;
+    padding: 15px;
+    display: grid;
+    grid-template-areas: "a b c d e";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;   
+    grid-column-gap: 50px;
+}
+
+button {
+    box-shadow: 0px 10px 14px -7px black;
+	background-color:black;
+	border-radius:8px;
+    color:white;
+	font-family:Arial;
+	font-size:30px;
+	font-weight:bold;
+	padding:20px 42px; 
+}
+
+main {
+    grid-area: main;
+    background-image: url(background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000000a2;
+    display: grid; 
+}
+
+ul {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000a2;
+    border-radius:8px;
+    overflow: scroll;
+    grid-area: 2 / 2 / span 1 / span 5 ;
+}
+
+audio#Player {
+    grid-area: 4 / 2 / span 1 / span 1 ;
+    position: center;
+}
+
+main div#playnow{
+    color: black;
+    display: grid;
+    text-align: center;
+    grid-area: 3 / 3 / span 1 / span 3;
+}
+
+main button#play{
+    box-shadow: 0px 10px 14px -7px black;
+	background-color:white;
+	border-radius:8px;
+    color:white;
+    font-family:Arial;
+    background-image: url(play.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	font-size:30px;
+	font-weight:bold;
+    padding:20px 42px;
+    display: grid; 
+    grid-area: 5 / 4 / span 1 / span 1
+}
+
+main button#pause{
+    box-shadow: 0px 10px 14px -7px black;
+	background-color:white;
+	border-radius:8px;
+    color:white;
+    font-family:Arial;
+    background-image: url(pause.png);
+    display : none;
+    background-repeat: no-repeat;
+    background-position: center;
+	font-size:30px;
+	font-weight:bold;
+    padding:20px 42px;
+    display: grid; 
+    grid-area: 5 / 4 / span 1 / span 1   ; 
+}
+ 
+main button#forward{
+    box-shadow: 0px 10px 14px -7px black;
+	background-color:white;
+	border-radius:8px;
+    color:white;
+    font-family:Arial;
+    background-image: url(forward.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	font-size:30px;
+	font-weight:bold;
+    padding:20px 42px;
+    display: grid; 
+    grid-area: 5 / 6 / span 1 / span 1
+}
+
+main button#backward{
+    box-shadow: 0px 10px 14px -7px black;
+	background-color:white;
+	border-radius:8px;
+    color:white;
+    font-family:Arial;
+    background-image: url(back.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	font-size:30px;
+	font-weight:bold;
+    padding:20px 42px;
+    display: grid; 
+    grid-area: 5  / 2 / span 1 / span 1
+}
+
+main button#openleft {
+    font-size: 1.5em;
+    color:black;
+    background:white;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000a2;
+    border-radius:8px;
+    grid-area: 2 / 2 / span 3 / span 1 ;
+}
+
+main button#closeleft {
+    font-size: 1.5em;
+    color:black;
+    background:white;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000a2;
+    border-radius:8px;
+    grid-area: 2 / 2 / span 3 / span 1 ;
+}
+
+main button#openall {
+    font-size: 1.5em;
+    color:black;
+    background:white;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000a2;
+    border-radius:8px;
+    grid-area: 2 / 4 / span 1 / span 1 ;
+}
+
+main button#closeall {
+    font-size: 1.5em;
+    color:black;
+    background:white;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000a2;
+    border-radius:8px;
+    grid-area: 4 / 4 / span 1 / span 1 ;
+}
+
+main button#openright {
+    font-size: 1.5em;
+    color:black;
+    background:white;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000a2;
+    border-radius:8px;
+    grid-area: 2 / 6 / span 3 / span 1 ;
+}
+
+main button#closeright {
+    font-size: 1.5em;
+    color:black;
+    background:white;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000a2;
+    border-radius:8px;
+    grid-area: 2 / 6 / span 3 / span 1 ;
+}
+    
+main div1.speed {
+    font-size: 1.5em;
+    background: white;
+    background-image: url(speed.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000a2;
+    border-radius:8px;
+    grid-area: 2 / 2 / span 1 / span 1 ;
+      
+}
+
+main div2.consumption {
+    font-size: 1.5em;
+    background:white;
+    background-image: url(consumption.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000a2;
+    border-radius:8px;
+    grid-area: 2 / 4 / span 1 / span 1 ;
+  
+}
+
+main div1.pressure {
+    font-size: 1.5em;
+    background:white;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000a2;
+    border-radius:8px;
+    grid-area: 4 / 2 / span 1 / span 1 ;
+    
+}
+
+main div2.humidity {
+    font-size: 1.5em;
+    background:white;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000a2;
+    border-radius:8px;
+    grid-area: 6 / 2 / span 1 / span 1 ;
+    
+}
+
+main div3.temperatur {
+    font-size: 1.5em;
+    background:white;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000a2;
+    border-radius:8px;
+    grid-area: 2 / 2 / span 1 / span 1 ;   
+}
